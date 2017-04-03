@@ -67,6 +67,12 @@ public class NewTest extends TestBaseClass {
 		Assert.assertTrue(true);
 		test.log(LogStatus.PASS, "xyz Test executed successfully");		
 	}
+	@Test
+	public void abcTest() throws Exception {
+		test=extent.startTest("abc test");
+		Assert.assertTrue(false);
+		test.log(LogStatus.PASS, "xyz Test executed successfully");		
+	}
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
 		if(result.getStatus()==ITestResult.FAILURE)
